@@ -1,4 +1,7 @@
 FROM debian:jessie
+LABEL maintainer="zengbo.zhang@gmail.com"
+LABEL description="out of box ctex package. \
+docker run --rm -v $PWD:$PWD -w $PWD pluswave/ctex xelatex some-file.tex"
 RUN apt-get update
 RUN apt-get install -y texlive-full
 RUN apt-get install -y fonts-droid
